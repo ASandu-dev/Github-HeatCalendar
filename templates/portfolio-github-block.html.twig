@@ -1,0 +1,48 @@
+{#
+/**
+ * @file
+ * Theme implementation for the GitHub activity block.
+ */
+#}
+<div class="github-calendar-wrapper">
+  <div class="github-summary">
+    <span class="total-count">{{ activity.total }} contributions in the last year</span>
+  </div>
+
+  <div class="github-calendar-content">
+    <div class="day-labels">
+      <span></span><span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span>
+    </div>
+
+    <div class="grid-container">
+      <div id="github-merged-activity" class="github-grid">
+        {% for date, data in activity.days %}
+          {% set classes = ['github-day'] %}
+          
+          {% if data.personal > 0 and data.work > 0 %}
+            {% set classes = classes|merge(['has-both']) %}
+          {% elseif data.personal > 0 %}
+            {% set classes = classes|merge(['has-personal']) %}
+          {% elseif data.work > 0 %}
+            {% set classes = classes|merge(['has-work']) %}
+          {% else %}
+            {% set classes = classes|merge(['level-0']) %}
+          {% endif %}
+
+          <div class="{{ classes|join(' ') }}" title="{{ date }}: {{ data.personal }} personal, {{ data.work }} work contributions"></div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="github-footer">
+    <div class="legend">
+      <span>Less</span>
+      <div class="github-day level-0"></div>
+      <div class="github-day has-personal"></div>
+      <div class="github-day has-work"></div>
+      <div class="github-day has-both"></div>
+      <span>More</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+portfolio_github.settings:
+  title: 'GitHub Activity Settings'
+  description: 'Manage GitHub usernames for activity fetching.'
+  parent: system.admin_config_services
+  route_name: portfolio_github.settings
+  weight: 0

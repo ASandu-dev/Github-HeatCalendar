@@ -1,0 +1,5 @@
+activity-grid:
+  version: 1.x
+  css:
+    theme:
+      css/github-activity.css: {}

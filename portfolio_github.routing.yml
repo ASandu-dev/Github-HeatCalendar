@@ -1,0 +1,7 @@
+portfolio_github.settings:
+  path: '/admin/config/services/portfolio-github'
+  defaults:
+    _form: '\Drupal\portfolio_github\Form\SettingsForm'
+    _title: 'GitHub Activity Settings'
+  requirements:
+    _permission: 'administer site configuration'

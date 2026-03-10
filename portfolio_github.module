@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function portfolio_github_theme($existing, $type, $theme, $path) {
+  return [
+    'portfolio_github_block' => [
+      'variables' => [
+        'activity' => [],
+      ],
+    ],
+  ];
+}

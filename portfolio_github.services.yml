@@ -1,0 +1,4 @@
+services:
+  portfolio_github.activity_service:
+    class: Drupal\portfolio_github\GithubActivityService
+    arguments: ['@config.factory', '@http_client', '@cache.default']
