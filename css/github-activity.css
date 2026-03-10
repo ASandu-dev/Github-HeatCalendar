@@ -88,7 +88,7 @@
 
 .github-footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin-top: 8px;
   font-size: 12px;
   color: #586069;
@@ -101,4 +101,12 @@
 }
 .total-count {
   color: white;
+}
+
+.work-color {
+  color: #ea580c;
+}
+
+.personal-color {
+  color: #26a641;
 }
